@@ -26,7 +26,7 @@ postRoutes.get("/", async (req, res) => {
 });
 
 postRoutes.post("/create", upload.single('image'), async (req, res) => {
-  const { title, content, author } = req.body;
+  const { title, content, author, image } = req.body;
 
   try {
     if (!title.trim() || !content.trim() || !author) {
