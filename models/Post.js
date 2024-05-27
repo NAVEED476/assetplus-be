@@ -7,8 +7,7 @@ var postSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-
-    poster: {
+    content: {
       type: String,
       required: true,
     },
@@ -16,7 +15,14 @@ var postSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    image: {
+      type: String,
+    },
     createdAt: {
+      type: Date,
+      default: Date.now,
+    },
+    updatedAt: {
       type: Date,
       default: Date.now,
     },
